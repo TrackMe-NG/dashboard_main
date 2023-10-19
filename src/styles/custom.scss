@@ -32,3 +32,116 @@
     }
   }
 }
+
+/* SUMMARY SECTION */
+
+.summary {
+  background: $white;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 17rem;
+
+  &_inner {
+    padding: 1.5rem 2rem;
+    display: grid;
+    gap: 1rem;
+  }
+  &_top {
+    @include flex_center();
+    justify-content: space-between;
+
+    &_left {
+      color: $light_dark;
+      display: grid;
+      gap: 0.2rem;
+      h4 {
+        font-size: 1.0625rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.375rem;
+        letter-spacing: -0.0255rem;
+      }
+
+      p {
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1rem;
+      }
+    }
+
+    &_right {
+      @include flex_center();
+      gap: 0.5rem;
+    }
+  }
+
+  &_bottom {
+    &_inner {
+      @include flex_center();
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+  }
+
+  &_box {
+    width: 100%;
+    max-width: 22rem;
+    height: 10.125rem;
+    border-radius: 1.25rem;
+    background: $white;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+
+    &_inner {
+      display: grid;
+      gap: 2rem;
+    }
+
+    &_top {
+      @include flex_center();
+      justify-content: space-between;
+      img {
+        border-radius: 50%;
+        padding: 0.5rem;
+        background: $light_bg;
+        @include flex_center();
+      }
+
+      h5 {
+        color: #000;
+        text-align: right;
+        font-size: 1.75rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 2.125rem;
+        letter-spacing: 0.0225rem;
+      }
+    }
+
+    &_bottom {
+      text-align: right;
+      p {
+        color: $dark_text;
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.5625rem;
+        letter-spacing: 0.02375rem;
+        text-transform: capitalize;
+      }
+
+      span {
+        padding: 0;
+        margin: 0;
+        color: $btn_bg;
+        font-size: 0.9375rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.25rem;
+        letter-spacing: -0.03125rem;
+      }
+    }
+  }
+}
