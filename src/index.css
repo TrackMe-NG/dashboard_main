@@ -10,6 +10,12 @@
   font-style: normal;
 }
 
+input {
+  border: none;
+  outline: none;
+  background: inherit;
+}
+
 ul {
   list-style: none;
 }
