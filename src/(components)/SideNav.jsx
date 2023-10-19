@@ -18,7 +18,11 @@ import {
 } from "../assets/image";
 
 export const SideNav = () => {
-  const [active, setActive] = useState(false);
+  const [activeItem, setActiveItem] = useState(menuItems[0].id);
+
+  const toggleActive = (itemId) => {
+    setActiveItem(itemId);
+  };
 
   return (
     <>
@@ -31,17 +35,21 @@ export const SideNav = () => {
           </div>
 
           <ul className="sidebar_menu_list">
-            {menItems.map((item, i) => (
+            {menuItems.map((item) => (
               <li
-                className={`${active ? "" : "active"}`}
-                onClick={() => setActive(!active)}
-                key={i}
+                className={activeItem === item.id ? "active" : ""}
+                onClick={() => toggleActive(item.id)}
+                key={item.id}
               >
                 <img
-                  src={active ? item?.icon_src : item?.icon_src_active}
+                  src={
+                    activeItem === item.id
+                      ? item.icon_src_active
+                      : item.icon_src
+                  }
                   alt="icon"
                 />
-                <span>{item?.title}</span>
+                <span>{item.title}</span>
               </li>
             ))}
           </ul>
@@ -50,9 +58,7 @@ export const SideNav = () => {
           <div className="sidebar_update">
             <div className="sidebar_update_inner">
               <img src={update_rotate_icon} alt="icon" />
-
               <p>New Update Available</p>
-
               <button className="btn_main">Update</button>
             </div>
           </div>
@@ -69,37 +75,42 @@ export const SideNav = () => {
   );
 };
 
-const menItems = [
+const menuItems = [
   {
     id: 1,
     icon_src: dashboard_dark_icon,
     icon_src_active: dashboard_white_icon,
     title: "dashboard",
   },
+
   {
     id: 2,
     icon_src: shopping_bag_icon,
     icon_src_active: shopping_bag_white_icon,
     title: "product",
   },
+
   {
     id: 3,
     icon_src: subscription_dark_icon,
     icon_src_active: subscription_white_icon,
     title: "subscription",
   },
+
   {
     id: 4,
     icon_src: user_dark_icon,
     icon_src_active: user_white_icon,
     title: "customer",
   },
+
   {
     id: 5,
     icon_src: support_dark_icon,
     icon_src_active: support_white_icon,
     title: "support",
   },
+
   {
     id: 6,
     icon_src: settings_dark_icon,
