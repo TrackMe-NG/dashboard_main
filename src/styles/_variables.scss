@@ -40,6 +40,12 @@
   &:hover {
     scale: 1.2;
   }
+
+  &.small {
+    &:hover {
+      scale: 1.1;
+    }
+  }
 }
 
 /* BG */
