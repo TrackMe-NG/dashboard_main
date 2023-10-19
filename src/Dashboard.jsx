@@ -1,5 +1,6 @@
 import { Header } from "./(components)/Header";
 import { SideNav } from "./(components)/SideNav";
+import { Summary } from "./(components)/Summary";
 
 const Dashboard = () => {
   return (
@@ -15,7 +16,13 @@ const Dashboard = () => {
           <div className="dashboard_main_right">
             <div className="dashboard_main_right_inner">
               {/* HEADER SECTION */}
-              <Header />
+              <div>
+                <Header />
+              </div>
+              {/* SUMMARY SECTION */}
+              <div>
+                <Summary />
+              </div>
             </div>
           </div>
         </div>
