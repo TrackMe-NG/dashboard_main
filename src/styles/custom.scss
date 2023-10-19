@@ -1,5 +1,6 @@
 @import "./colors";
 @import "./variables";
+@import "./header";
 @import "./sidenav";
 
 /* DASHBOARD STYLES */
@@ -20,6 +21,14 @@
       justify-content: flex-start;
       align-items: flex-start;
       gap: 0.5rem;
+    }
+
+    &_left {
+      width: fit-content;
+    }
+
+    &_right {
+      width: 100%;
     }
   }
 }
