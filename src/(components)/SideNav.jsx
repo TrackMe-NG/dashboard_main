@@ -25,7 +25,9 @@ export const SideNav = () => {
       <aside className="sidebar">
         <div className="sidebar_inner">
           <div className="sidebar_logo">
-            <img src={logo_icon} alt="logo" />
+            <a href="/">
+              <img src={logo_icon} alt="logo" />
+            </a>
           </div>
 
           <ul className="sidebar_menu_list">
