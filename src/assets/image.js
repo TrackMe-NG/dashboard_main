@@ -20,3 +20,8 @@ export { default as default_img } from "./default_img.svg";
 export { default as switch_icon } from "./switch_icon.svg";
 export { default as chat_dark_icon } from "./chat_dark_icon.svg";
 export { default as bell_dark_icon } from "./bell_dark_icon.svg";
+export { default as calender_icon } from "./calender_icon.svg";
+export { default as group_dark_icon } from "./group_dark_icon.svg";
+export { default as sales_icon } from "./sales_icon.svg";
+export { default as orders_play_dark_icon } from "./orders_play_dark_icon.svg";
+export { default as user_small_icon } from "./user_small_icon.svg";
