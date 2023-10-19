@@ -1,6 +1,25 @@
 @import "./colors";
 @import "./variables";
+@import "./sidenav";
 
-p {
-  border: 1px solid $black;
+/* DASHBOARD STYLES */
+
+.dashboard {
+  &_main {
+    width: 100vw;
+    height: 100dvh;
+    background: $dahboard_bg;
+    color: $black;
+    padding: 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    overflow: hidden;
+
+    &_inner {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
 }
