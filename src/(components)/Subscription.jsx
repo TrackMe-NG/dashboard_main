@@ -14,11 +14,8 @@ export const Subscription = () => {
             <div className="subscription_table_nav">
               <ul>
                 <li>Profile</li>
-
                 <li>Product</li>
-
                 <li>Status</li>
-
                 <li>Price</li>
               </ul>
             </div>
@@ -29,26 +26,39 @@ export const Subscription = () => {
                   { icon_src, price, fullName, userName, product, status },
                   index
                 ) => {
+                  let statusColor;
+                  if (status == "Declined") {
+                    statusColor = "#FF0000";
+                  } else if (status == "pending") {
+                    statusColor = "#FCA825";
+                  } else if (status == "successful") {
+                    statusColor = "#00CA54";
+                  } else {
+                    statusColor = "#1a1c19";
+                  }
+
                   return (
                     <div key={index} className="table_data_box">
-                      <div className="table_data_profile">
-                        <img src={icon_src} alt="profile-pic" />
+                      <div className="table_data_box_inner">
+                        <div className="table_data_profile">
+                          <img src={icon_src} alt="profile-pic" />
 
-                        <div>
-                          <h5 className="fullname">{fullName}</h5>
+                          <div>
+                            <h5 className="fullname">{fullName}</h5>
 
-                          <span className="username">{userName}</span>
+                            <span className="username">{userName}</span>
+                          </div>
                         </div>
-                      </div>
 
-                      <div className="table_data_product">
-                        <h5>{product} security</h5>
-                      </div>
-                      <div className="table_data_status">
-                        <h5>{status}</h5>
-                      </div>
-                      <div className="table_data_price">
-                        <h5>#{price}</h5>
+                        <div className="table_data_product">
+                          <h5 className="primary_text">{product} security</h5>
+                        </div>
+                        <div className="table_data_status">
+                          <h5 style={{ color: statusColor }}>{status}</h5>{" "}
+                        </div>
+                        <div className="table_data_price">
+                          <h5> &#8358; {price}</h5>
+                        </div>
                       </div>
                     </div>
                   );
@@ -124,7 +134,7 @@ const usersData = [
     fullName: "Seyi Bolufemi TrackMeNg",
     userName: "Ad_Commander",
     product: "private",
-    status: "successfull",
+    status: "successful",
     price: "1,000,000",
   },
 ];
