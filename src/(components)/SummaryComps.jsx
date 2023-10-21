@@ -6,7 +6,7 @@ import {
   user_small_icon,
 } from "../assets/image";
 
-export const Summary = () => {
+export const SummaryComps = () => {
   return (
     <>
       <div className="summary">
@@ -17,6 +17,7 @@ export const Summary = () => {
               <p>Free & Subscribers</p>
             </div>
 
+            <div className="summary_top_middle"></div>
             <div className="summary_top_right">
               <img src={calender_icon} alt="icon" />
 
