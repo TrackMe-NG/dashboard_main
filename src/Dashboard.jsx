@@ -2,6 +2,7 @@ import DashboardLayout from "./layouts/DashboardLayout";
 import { Summary } from "./(components)/Summary";
 import { Subscription } from "./(components)/Subscription";
 import { Target } from "./(components)/Target";
+import { Reviews } from "./(components)/Reviews";
 
 const Dashboard = () => {
   return (
@@ -18,6 +19,8 @@ const Dashboard = () => {
           <div className="bottom_right">
             {/* TARGET SECTION */}
             <Target />
+            {/* TARGET SECTION */}
+            <Reviews />
           </div>
         </div>
       </DashboardLayout>
