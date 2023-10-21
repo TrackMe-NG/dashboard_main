@@ -9,9 +9,13 @@ import {
 import { useLocation } from "react-router-dom";
 
 export const SummaryComps = () => {
-  const [activeBtn, setActiveBtn] = useState(false);
+  const [activeBtn, setActiveBtn] = useState(buttonsData[0].id);
   const location = useLocation();
   const isProductRoute = location.pathname === "/product";
+
+  const handleButtonClick = (buttonId) => {
+    setActiveBtn(buttonId === activeBtn ? "" : buttonId);
+  };
 
   return (
     <>
@@ -22,27 +26,21 @@ export const SummaryComps = () => {
               <h4>Today&apos;s summary</h4>
               <p>Free & Subscribers</p>
             </div>
-
             {isProductRoute && (
               <div className="summary_top_middle">
                 <div className="summary_top_middle_inner">
-                  <button
-                    className={activeBtn ? "" : "btn_active"}
-                    onClick={() => setActiveBtn(!activeBtn)}
-                  >
-                    Individual Security
-                  </button>
-
-                  <button
-                    className={activeBtn ? "btn_active" : ""}
-                    onClick={() => setActiveBtn(!activeBtn)}
-                  >
-                    Private Security
-                  </button>
+                  {buttonsData.map((button) => (
+                    <button
+                      key={button.id}
+                      className={button.id === activeBtn ? "btn_active" : ""}
+                      onClick={() => handleButtonClick(button.id)}
+                    >
+                      {button.label}
+                    </button>
+                  ))}
                 </div>
               </div>
             )}
-
             <div className="summary_top_right">
               <img src={calender_icon} alt="icon" />
 
@@ -77,6 +75,17 @@ export const SummaryComps = () => {
     </>
   );
 };
+
+const buttonsData = [
+  {
+    id: 1,
+    label: "Individual Security",
+  },
+  {
+    id: 2,
+    label: "Private Security",
+  },
+];
 
 const summaryItems = [
   {
