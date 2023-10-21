@@ -42,6 +42,11 @@
     .bottom_left {
       width: 100%;
     }
+
+    .bottom_right {
+      display: grid;
+      gap: 0.5rem;
+    }
   }
 }
 
@@ -162,11 +167,11 @@
 .target {
   background: $white;
   width: 16.75rem;
-  height: 16.375rem;
+  height: 14.5rem;
   flex-shrink: 0;
   border-radius: 0.5rem;
   &_inner {
-    padding: 1.5rem;
+    padding: 1rem;
 
     h6 {
       color: $light_dark;
@@ -186,6 +191,70 @@
   &_img {
     width: 100%;
     @include flex_center();
-    margin: 1rem 0;
+    margin: 0.6rem 0;
+  }
+}
+
+/* REVIEWS SECTION */
+.reviews {
+  background: $white;
+  width: 100%;
+  height: 23.5dvh;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+  padding: 1rem;
+
+  &_header {
+    color: $light_dark;
+    font-size: 1.0625rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.375rem;
+    letter-spacing: -0.0255rem;
+    text-transform: capitalize;
+  }
+  &_box {
+    width: 100%;
+
+    &_left {
+      h6 {
+        color: $light_dark;
+        font-size: 1.0625rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.375rem;
+        letter-spacing: -0.0255rem;
+      }
+    }
+  }
+
+  /* REVIEWS BOX */
+
+  &_box {
+    &_main {
+      display: grid;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+      height: 16dvh;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &_inner {
+      @include flex_center();
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    &_left {
+      @include flex_center();
+      gap: 0.5rem;
+    }
+    &_right {
+      @include flex_center();
+    }
   }
 }
