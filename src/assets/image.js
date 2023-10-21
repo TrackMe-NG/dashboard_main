@@ -26,3 +26,4 @@ export { default as sales_icon } from "./sales_icon.svg";
 export { default as orders_play_dark_icon } from "./orders_play_dark_icon.svg";
 export { default as user_small_icon } from "./user_small_icon.svg";
 export { default as sub_user_icon } from "./sub_user_icon.svg";
+export { default as eclipse_icon } from "./eclipse_icon.svg";
