@@ -1,5 +1,5 @@
 import DashboardLayout from "./layouts/DashboardLayout";
-import { Summary } from "./(components)/Summary";
+import { SummaryComps } from "./(components)/SummaryComps";
 import { Subscription } from "./(components)/Subscription";
 import { Target } from "./(components)/Target";
 import { Reviews } from "./(components)/Reviews";
@@ -9,7 +9,7 @@ const Dashboard = () => {
     <>
       <DashboardLayout>
         {/* SUMMARY SECTION */}
-        <Summary />
+        <SummaryComps />
         <div className="dashboard_bottom_sec">
           {/* SUBSCRIPTION SECTION */}
           <div className="bottom_left">
