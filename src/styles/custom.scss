@@ -32,6 +32,17 @@
       width: 100%;
     }
   }
+
+  &_bottom_sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+
+    .bottom_left {
+      width: 100%;
+    }
+  }
 }
 
 /* SUMMARY SECTION */
@@ -144,5 +155,37 @@
         letter-spacing: -0.03125rem;
       }
     }
+  }
+}
+
+/* TARGET SECTION */
+.target {
+  background: $white;
+  width: 16.75rem;
+  height: 16.375rem;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+  &_inner {
+    padding: 1.5rem;
+
+    h6 {
+      color: $light_dark;
+      font-size: 1.0625rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1.375rem;
+      letter-spacing: -0.0255rem;
+      text-transform: capitalize;
+
+      &:nth-of-type(2) {
+        text-align: center;
+      }
+    }
+  }
+
+  &_img {
+    width: 100%;
+    @include flex_center();
+    margin: 1rem 0;
   }
 }
