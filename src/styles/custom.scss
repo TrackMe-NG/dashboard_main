@@ -309,10 +309,21 @@
   }
 }
 
+/* CUSTOM PAGE HEIGHTS */
 .pageHeight {
   height: 80.5dvh;
 }
 
 .pageTableHeight {
   max-height: 80dvh;
+}
+
+/* TOP SELLER STYLES */
+.topseller {
+  width: 16.8125rem;
+  height: 25rem;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+  background: $white;
+  color: $light_dark;
 }
