@@ -289,3 +289,30 @@
     }
   }
 }
+
+/* SUBSCRIPTION PAGE */
+.subscription_page {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+  height: 100%;
+  margin-top: 0.5rem;
+
+  &_left {
+    width: 100%;
+  }
+
+  &_right {
+    display: grid;
+    gap: 0.5rem;
+  }
+}
+
+.pageHeight {
+  height: 80.5dvh;
+}
+
+.pageTableHeight {
+  max-height: 80dvh;
+}
