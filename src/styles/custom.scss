@@ -88,6 +88,37 @@
       }
     }
 
+    &_middle {
+      border-radius: 6.25rem;
+      background: $light_bg;
+      overflow: hidden;
+
+      &_inner {
+        @include flex_center();
+        button {
+          color: $btn_light_text;
+          font-size: 0.9375rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 1.25rem;
+          letter-spacing: -0.03125rem;
+          height: 2.875rem;
+          padding: 0.875rem 1.25rem;
+          gap: 0.625rem;
+          scale: 0.9;
+          transition: all 0.2s ease-in-out;
+
+          &:hover,
+          &.btn_active {
+            color: $white;
+            background: $btn_bg;
+            border-radius: 6.25rem;
+            scale: 1;
+          }
+        }
+      }
+    }
+
     &_right {
       @include flex_center();
       gap: 0.5rem;
