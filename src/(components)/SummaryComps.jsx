@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   calender_icon,
   group_dark_icon,
@@ -5,8 +6,13 @@ import {
   sales_icon,
   user_small_icon,
 } from "../assets/image";
+import { useLocation } from "react-router-dom";
 
 export const SummaryComps = () => {
+  const [activeBtn, setActiveBtn] = useState(false);
+  const location = useLocation();
+  const isProductRoute = location.pathname === "/product";
+
   return (
     <>
       <div className="summary">
@@ -17,7 +23,26 @@ export const SummaryComps = () => {
               <p>Free & Subscribers</p>
             </div>
 
-            <div className="summary_top_middle"></div>
+            {isProductRoute && (
+              <div className="summary_top_middle">
+                <div className="summary_top_middle_inner">
+                  <button
+                    className={activeBtn ? "" : "btn_active"}
+                    onClick={() => setActiveBtn(!activeBtn)}
+                  >
+                    Individual Security
+                  </button>
+
+                  <button
+                    className={activeBtn ? "btn_active" : ""}
+                    onClick={() => setActiveBtn(!activeBtn)}
+                  >
+                    Private Security
+                  </button>
+                </div>
+              </div>
+            )}
+
             <div className="summary_top_right">
               <img src={calender_icon} alt="icon" />
 
@@ -37,7 +62,7 @@ export const SummaryComps = () => {
 
                     <div className="summary_box_bottom">
                       <p>
-                        {summaryItem.text_dark}{" "}
+                        {summaryItem.text_dark}
                         <span>{summaryItem.extra_text}</span>
                       </p>
                       <span>{summaryItem.colored_text}</span>
