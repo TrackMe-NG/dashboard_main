@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   dashboard_dark_icon,
   dashboard_white_icon,
@@ -16,12 +15,18 @@ import {
   user_dark_icon,
   user_white_icon,
 } from "../assets/image";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export const SideNav = () => {
-  const [activeItem, setActiveItem] = useState(menuItems[0].id);
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  const toggleActive = (itemId) => {
-    setActiveItem(itemId);
+  const isActive = (item) => {
+    return location.pathname === item.link;
+  };
+
+  const handleItemClick = (item) => {
+    navigate(item.link);
   };
 
   return (
@@ -37,16 +42,12 @@ export const SideNav = () => {
           <ul className="sidebar_menu_list">
             {menuItems.map((item) => (
               <li
-                className={activeItem === item.id ? "active" : ""}
-                onClick={() => toggleActive(item.id)}
+                className={isActive(item) ? "active" : ""}
                 key={item.id}
+                onClick={() => handleItemClick(item)}
               >
                 <img
-                  src={
-                    activeItem === item.id
-                      ? item.icon_src_active
-                      : item.icon_src
-                  }
+                  src={isActive(item) ? item.icon_src_active : item.icon_src}
                   alt="icon"
                 />
                 <span>{item.title}</span>
@@ -81,6 +82,7 @@ const menuItems = [
     icon_src: dashboard_dark_icon,
     icon_src_active: dashboard_white_icon,
     title: "dashboard",
+    link: "/",
   },
 
   {
@@ -88,6 +90,7 @@ const menuItems = [
     icon_src: shopping_bag_icon,
     icon_src_active: shopping_bag_white_icon,
     title: "product",
+    link: "/product",
   },
 
   {
@@ -95,6 +98,7 @@ const menuItems = [
     icon_src: subscription_dark_icon,
     icon_src_active: subscription_white_icon,
     title: "subscription",
+    link: "/subscription",
   },
 
   {
@@ -102,6 +106,7 @@ const menuItems = [
     icon_src: user_dark_icon,
     icon_src_active: user_white_icon,
     title: "customer",
+    link: "/customer",
   },
 
   {
@@ -109,6 +114,7 @@ const menuItems = [
     icon_src: support_dark_icon,
     icon_src_active: support_white_icon,
     title: "support",
+    link: "/support",
   },
 
   {
@@ -116,5 +122,6 @@ const menuItems = [
     icon_src: settings_dark_icon,
     icon_src_active: settings_white_icon,
     title: "settings",
+    link: "/settings",
   },
 ];
