@@ -1,9 +1,15 @@
+import { useLocation } from "react-router-dom";
 import { sub_user_icon } from "../assets/image";
 
 export const SubscriptionComps = () => {
+  const location = useLocation();
+  const isSubscriptionRoute = location.pathname === "/subscription";
+
   return (
     <>
-      <div className="subscription">
+      <div
+        className={`subscription ${isSubscriptionRoute ? "pageHeight" : ""}`}
+      >
         <div className="subscription_inner">
           <div className="subscription_top">
             <h4>recent subscription</h4>
@@ -20,7 +26,11 @@ export const SubscriptionComps = () => {
               </ul>
             </div>
 
-            <div className="subscription_table_data">
+            <div
+              className={`subscription_table_data ${
+                isSubscriptionRoute ? "pageTableHeight" : ""
+              }`}
+            >
               {usersData.map(
                 (
                   { icon_src, price, fullName, userName, product, status },
