@@ -1,6 +1,6 @@
 import { sub_user_icon } from "../assets/image";
 
-export const Subscription = () => {
+export const SubscriptionComps = () => {
   return (
     <>
       <div className="subscription">
