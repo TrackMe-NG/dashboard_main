@@ -479,3 +479,18 @@
     }
   }
 }
+
+/* CUSTOMER STYLES */
+
+.customer {
+  &_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  &_left {
+    width: 100%;
+  }
+}
