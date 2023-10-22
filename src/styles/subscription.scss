@@ -107,7 +107,7 @@
           width: 33%;
 
           &.pageProfileWidth {
-            width: 190%;
+            width: 45%;
           }
 
           & > div {
@@ -123,14 +123,17 @@
 
         &_product {
           width: 31%;
-
           &.pageProductWidth {
-            width: 200%;
+            width: 44%;
           }
         }
 
         &_status {
           width: 30.3%;
+
+          &.pageStatusWidth {
+            width: fit-content;
+          }
         }
       }
     }
