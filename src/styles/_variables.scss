@@ -60,7 +60,6 @@
   color: $btn_bg;
 }
 
-/* TEXT VARIABLES */
 .text_black {
   color: $black;
 }
@@ -72,4 +71,14 @@
 }
 .text_light_dark {
   color: $light_dark;
+}
+
+.header_medium {
+  font-family: Montserrat;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5625rem;
+  letter-spacing: 0.02375rem;
+  text-transform: capitalize;
 }
