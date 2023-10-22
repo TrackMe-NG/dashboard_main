@@ -5,7 +5,7 @@ export const TopSeller = () => {
     <>
       <div className="topseller">
         <div className="topseller_inner">
-          <h4 className="topseller_header">top seller</h4>
+          <h4 className="header_medium">top seller</h4>
 
           <div className="topseller_top">
             <div className="topseller_top_inner">
