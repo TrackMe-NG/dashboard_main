@@ -1,6 +1,6 @@
 .subscription {
   background: $white;
-  height: 49dvh;
+  height: 51dvh;
   border-radius: 0.5rem;
   overflow-y: hidden;
 
@@ -70,7 +70,7 @@
 
     &_data {
       overflow: scroll;
-      max-height: 32vh;
+      max-height: 34vh;
       margin-block: 1.5rem 0;
       display: grid;
       gap: 1rem;
@@ -106,6 +106,10 @@
           color: $light_dark;
           width: 33%;
 
+          &.pageProfileWidth {
+            width: 45%;
+          }
+
           & > div {
             span {
               font-size: 0.8125rem;
@@ -119,10 +123,17 @@
 
         &_product {
           width: 31%;
+          &.pageProductWidth {
+            width: 44%;
+          }
         }
 
         &_status {
           width: 30.3%;
+
+          &.pageStatusWidth {
+            width: fit-content;
+          }
         }
       }
     }

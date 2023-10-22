@@ -30,6 +30,11 @@
 
     &_right {
       width: 100%;
+
+      &_inner {
+        display: grid;
+        gap: 0.5rem;
+      }
     }
   }
 
@@ -54,7 +59,7 @@
 
 .summary {
   background: $white;
-  margin: 1rem 0;
+  margin-block: 0 0.5rem;
   border-radius: 0.5rem;
   width: 100%;
   height: 17rem;
@@ -141,7 +146,7 @@
     background: $white;
     box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
     padding: 1rem;
-
+    overflow: hidden;
     &_inner {
       display: grid;
       gap: 2rem;
@@ -198,7 +203,7 @@
 .target {
   background: $white;
   width: 100%;
-  height: 14.5rem;
+  height: 15rem;
   flex-shrink: 0;
   border-radius: 0.5rem;
   &_inner {
@@ -222,7 +227,7 @@
   &_img {
     width: 100%;
     @include flex_center();
-    margin: 0.6rem 0;
+    margin: 0.8rem 0;
   }
 }
 
@@ -230,10 +235,14 @@
 .reviews {
   background: $white;
   width: 100%;
-  height: 23.5dvh;
+  height: 24.5dvh;
   border-radius: 0.5rem;
   flex-shrink: 0;
   padding: 1rem;
+
+  &.isCustomerMainHeight {
+    height: 37.3dvh;
+  }
 
   &_header {
     color: $light_dark;
@@ -264,10 +273,14 @@
   &_box {
     &_main {
       display: grid;
-      gap: 0.5rem;
+      gap: 1rem;
       margin-top: 1.5rem;
       height: 16dvh;
       overflow-y: scroll;
+
+      &.isCustomerHeight {
+        height: 29.5dvh;
+      }
 
       &::-webkit-scrollbar {
         display: none;
@@ -297,7 +310,6 @@
   align-items: flex-start;
   gap: 0.5rem;
   height: 100%;
-  margin-top: 0.5rem;
 
   &_left {
     width: 100%;
@@ -315,7 +327,7 @@
 }
 
 .pageTableHeight {
-  max-height: 80dvh;
+  max-height: 63dvh;
 }
 
 /* TOP SELLER STYLES */
@@ -329,16 +341,6 @@
 
   &_inner {
     padding: 1.5rem;
-  }
-
-  &_header {
-    font-family: Montserrat;
-    font-size: 1.25rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 1.5625rem;
-    letter-spacing: 0.02375rem;
-    text-transform: capitalize;
   }
 
   &_top {
@@ -421,5 +423,127 @@
     line-height: 1.125rem;
     letter-spacing: -0.00488rem;
     text-transform: capitalize;
+  }
+}
+
+/* REVENUE STYLES */
+.revenue {
+  background: $white;
+  color: $light_dark;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 37.4dvh;
+  flex-shrink: 0;
+
+  &_inner {
+    padding: 1.5rem;
+
+    h4 {
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1.5625rem;
+      letter-spacing: 0.02375rem;
+      text-transform: capitalize;
+    }
+
+    img {
+      width: 100%;
+      max-width: 12rem;
+      aspect-ratio: 1/1;
+      margin: 1rem auto;
+    }
+  }
+
+  &_bottom {
+    ul {
+      display: grid;
+      gap: 1rem;
+      font-size: 1.0625rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1.375rem;
+      letter-spacing: -0.0255rem;
+
+      .colored_box {
+        content: "";
+        padding: 0.1rem 0.7rem;
+        border-radius: 0.3125rem;
+        margin-inline: 0.5rem 1rem;
+
+        &.first {
+          background: $btn_bg;
+        }
+        &.second {
+          background: $coloredBox2;
+        }
+      }
+    }
+  }
+}
+
+/* CUSTOMER STYLES */
+.customer {
+  &_inner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  &_left {
+    width: 75%;
+  }
+  &_right {
+    width: 25%;
+    display: grid;
+    gap: 0.5rem;
+  }
+}
+
+/* TOPCUSTOMER STYLES  */
+.topcustomer {
+  width: 100%;
+  height: 25rem;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+  background: $white;
+
+  &_inner {
+    padding: 1.5rem;
+    display: grid;
+    gap: 1rem;
+
+    img {
+      width: 100%;
+      max-width: 10.5rem;
+      aspect-ratio: 1/1;
+      margin: 0 auto;
+    }
+    h6,
+    p {
+      text-align: center;
+      font-size: 1.0625rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1.375rem;
+      letter-spacing: -0.0255rem;
+    }
+  }
+
+  &_body {
+    @include flex_center();
+    display: grid;
+    gap: 2rem;
+  }
+
+  &_details {
+    display: grid;
+    width: 100%;
+    max-width: 19.125rem;
+    height: 6.25rem;
+    margin: 0 auto;
+    padding: 0.875rem 1.25rem;
+    border: 1px solid $btn_bg;
   }
 }

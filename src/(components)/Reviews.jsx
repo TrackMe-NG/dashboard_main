@@ -1,3 +1,4 @@
+import { useLocation } from "react-router-dom";
 import {
   reviews_user_icon,
   star_fill_icon,
@@ -5,12 +6,21 @@ import {
 } from "../assets/image";
 
 export const Reviews = () => {
+  const location = useLocation();
+  const isCustomerRoute = location.pathname === "/customer";
+
   return (
     <>
-      <div className="reviews">
+      <div
+        className={`reviews ${isCustomerRoute ? "isCustomerMainHeight" : ""}`}
+      >
         <div className="reviews_inner">
           <h6 className="reviews_header">customer review</h6>
-          <div className="reviews_box_main">
+          <div
+            className={`reviews_box_main ${
+              isCustomerRoute ? "isCustomerHeight" : ""
+            }`}
+          >
             {reviewsData.map(({ img_src, fullName, stars }, index) => {
               return (
                 <div key={index} className="reviews_box">
@@ -66,6 +76,24 @@ const reviewsData = [
   },
   {
     id: 5,
+    img_src: reviews_user_icon,
+    fullName: "Den_dev",
+    stars: [star_fill_icon, star_outline_icon, star_outline_icon],
+  },
+  {
+    id: 6,
+    img_src: reviews_user_icon,
+    fullName: "Den_dev",
+    stars: [star_fill_icon, star_outline_icon, star_outline_icon],
+  },
+  {
+    id: 7,
+    img_src: reviews_user_icon,
+    fullName: "Den_dev",
+    stars: [star_fill_icon, star_outline_icon, star_outline_icon],
+  },
+  {
+    id: 8,
     img_src: reviews_user_icon,
     fullName: "Den_dev",
     stars: [star_fill_icon, star_outline_icon, star_outline_icon],

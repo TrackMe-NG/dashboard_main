@@ -1,18 +1,16 @@
 import { useLocation } from "react-router-dom";
 import { sub_user_icon } from "../assets/image";
 
-export const SubscriptionComps = () => {
+export const UsersComps = () => {
   const location = useLocation();
-  const isSubscriptionRoute = location.pathname === "/subscription";
+  const isCustomerRoute = location.pathname === "/customer";
 
   return (
     <>
-      <div
-        className={`subscription ${isSubscriptionRoute ? "pageHeight" : ""}`}
-      >
+      <div className={`subscription ${isCustomerRoute ? "pageHeight" : ""}`}>
         <div className="subscription_inner">
           <div className="subscription_top">
-            <h4>recent subscription</h4>
+            <h4>Users</h4>
 
             <p>See all</p>
           </div>
@@ -21,36 +19,28 @@ export const SubscriptionComps = () => {
               <ul>
                 <li>Profile</li>
                 <li>Product</li>
-                <li>Status</li>
-                <li>Price</li>
+                <li className="text_light_dark">Location</li>
               </ul>
             </div>
 
             <div
               className={`subscription_table_data ${
-                isSubscriptionRoute ? "pageTableHeight" : ""
+                isCustomerRoute ? "pageTableHeight" : ""
               }`}
             >
               {usersData.map(
                 (
-                  { icon_src, price, fullName, userName, product, status },
+                  { icon_src, fullName, userName, product, state, country },
                   index
                 ) => {
-                  let statusColor;
-                  if (status == "declined" || status == "Declined") {
-                    statusColor = "#FF0000";
-                  } else if (status == "pending" || status == "Pending") {
-                    statusColor = "#FCA825";
-                  } else if (status == "successful" || status == "Successful") {
-                    statusColor = "#00CA54";
-                  } else {
-                    statusColor = "#1a1c19";
-                  }
-
                   return (
                     <div key={index} className="table_data_box">
                       <div className="table_data_box_inner">
-                        <div className="table_data_profile">
+                        <div
+                          className={`table_data_profile ${
+                            isCustomerRoute ? "pageProfileWidth" : ""
+                          }`}
+                        >
                           <img src={icon_src} alt="profile-pic" />
 
                           <div>
@@ -60,14 +50,21 @@ export const SubscriptionComps = () => {
                           </div>
                         </div>
 
-                        <div className="table_data_product">
+                        <div
+                          className={`table_data_product ${
+                            isCustomerRoute ? "pageProductWidth" : ""
+                          }`}
+                        >
                           <h5 className="primary_text">{product} security</h5>
                         </div>
-                        <div className="table_data_status">
-                          <h5 style={{ color: statusColor }}>{status}</h5>{" "}
-                        </div>
-                        <div className="table_data_price">
-                          <h5> &#8358; {price}</h5>
+                        <div
+                          className={`table_data_status ${
+                            isCustomerRoute ? "pageStatusWidth" : ""
+                          }`}
+                        >
+                          <h5>
+                            {state}, {country}
+                          </h5>
                         </div>
                       </div>
                     </div>
@@ -90,7 +87,8 @@ const usersData = [
     fullName: "Omosanyin Elijah Ayomide",
     userName: "Sanyins_UX",
     product: "individual",
-    status: "Declined",
+    state: "Lagos",
+    country: "Nigeria",
     price: "1000",
   },
   {
@@ -99,7 +97,8 @@ const usersData = [
     fullName: "Omosanyin Elijah Ayomide",
     userName: "Sanyins_UX",
     product: "individual",
-    status: "pending",
+    state: "Lagos",
+    country: "Nigeria",
     price: "1000",
   },
   {
@@ -108,7 +107,8 @@ const usersData = [
     fullName: "Omosanyin Elijah Ayomide",
     userName: "Sanyins_UX",
     product: "individual",
-    status: "successful",
+    state: "Lagos",
+    country: "Nigeria",
     price: "1000",
   },
   {
@@ -117,7 +117,8 @@ const usersData = [
     fullName: "Omosanyin Elijah Ayomide",
     userName: "Sanyins_UX",
     product: "individual",
-    status: "successful",
+    state: "Lagos",
+    country: "Nigeria",
     price: "1000",
   },
   {
@@ -126,7 +127,8 @@ const usersData = [
     fullName: "Omosanyin Elijah Ayomide",
     userName: "Sanyins_UX",
     product: "individual",
-    status: "declined",
+    state: "Lagos",
+    country: "Nigeria",
     price: "1000",
   },
   {
@@ -135,7 +137,8 @@ const usersData = [
     fullName: "Omosanyin Elijah Ayomide",
     userName: "Sanyins_UX",
     product: "individual",
-    status: "pending",
+    state: "Lagos",
+    country: "Nigeria",
     price: "1000",
   },
   {
@@ -144,7 +147,8 @@ const usersData = [
     fullName: "Omosanyin Elijah Ayomide",
     userName: "Sanyins_UX",
     product: "individual",
-    status: "successful",
+    state: "Lagos",
+    country: "Nigeria",
     price: "1000",
   },
   {
@@ -153,7 +157,8 @@ const usersData = [
     fullName: "Omosanyin Elijah Ayomide",
     userName: "Sanyins_UX",
     product: "individual",
-    status: "declined",
+    state: "Lagos",
+    country: "Nigeria",
     price: "1000",
   },
   {
@@ -162,7 +167,8 @@ const usersData = [
     fullName: "Omosanyin Elijah Ayomide",
     userName: "Sanyins_UX",
     product: "individual",
-    status: "successful",
+    state: "Lagos",
+    country: "Nigeria",
     price: "1000",
   },
   {
@@ -171,7 +177,8 @@ const usersData = [
     fullName: "Seyi Bolufemi TrackMeNg",
     userName: "Ad_Commander",
     product: "private",
-    status: "successful",
+    state: "Lagos",
+    country: "Nigeria",
     price: "1,000,000",
   },
 ];
