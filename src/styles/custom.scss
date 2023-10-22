@@ -335,16 +335,6 @@
     padding: 1.5rem;
   }
 
-  &_header {
-    font-family: Montserrat;
-    font-size: 1.25rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 1.5625rem;
-    letter-spacing: 0.02375rem;
-    text-transform: capitalize;
-  }
-
   &_top {
     @include flex_center();
     text-align: center;
@@ -498,5 +488,52 @@
   }
   &_right {
     width: 25%;
+  }
+}
+
+/* TOPCUSTOMER STYLES  */
+.topcustomer {
+  width: 100%;
+  height: 25rem;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+  background: $white;
+
+  &_inner {
+    padding: 1.5rem;
+    display: grid;
+    gap: 1rem;
+
+    img {
+      width: 100%;
+      max-width: 10.5rem;
+      aspect-ratio: 1/1;
+      margin: 0 auto;
+    }
+    h6,
+    p {
+      text-align: center;
+      font-size: 1.0625rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1.375rem;
+      letter-spacing: -0.0255rem;
+    }
+  }
+
+  &_body {
+    @include flex_center();
+    display: grid;
+    gap: 2rem;
+  }
+
+  &_details {
+    display: grid;
+    width: 100%;
+    max-width: 19.125rem;
+    height: 6.25rem;
+    margin: 0 auto;
+    padding: 0.875rem 1.25rem;
+    border: 1px solid $btn_bg;
   }
 }
