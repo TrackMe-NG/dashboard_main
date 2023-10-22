@@ -37,11 +37,11 @@ export const SubscriptionComps = () => {
                   index
                 ) => {
                   let statusColor;
-                  if (status == "Declined") {
+                  if (status == "declined" || status == "Declined") {
                     statusColor = "#FF0000";
-                  } else if (status == "pending") {
+                  } else if (status == "pending" || status == "Pending") {
                     statusColor = "#FCA825";
-                  } else if (status == "successful") {
+                  } else if (status == "successful" || status == "Successful") {
                     statusColor = "#00CA54";
                   } else {
                     statusColor = "#1a1c19";
@@ -126,7 +126,7 @@ const usersData = [
     fullName: "Omosanyin Elijah Ayomide",
     userName: "Sanyins_UX",
     product: "individual",
-    status: "successful",
+    status: "declined",
     price: "1000",
   },
   {
@@ -135,11 +135,38 @@ const usersData = [
     fullName: "Omosanyin Elijah Ayomide",
     userName: "Sanyins_UX",
     product: "individual",
-    status: "successful",
+    status: "pending",
     price: "1000",
   },
   {
     id: 7,
+    icon_src: sub_user_icon,
+    fullName: "Omosanyin Elijah Ayomide",
+    userName: "Sanyins_UX",
+    product: "individual",
+    status: "successful",
+    price: "1000",
+  },
+  {
+    id: 8,
+    icon_src: sub_user_icon,
+    fullName: "Omosanyin Elijah Ayomide",
+    userName: "Sanyins_UX",
+    product: "individual",
+    status: "declined",
+    price: "1000",
+  },
+  {
+    id: 9,
+    icon_src: sub_user_icon,
+    fullName: "Omosanyin Elijah Ayomide",
+    userName: "Sanyins_UX",
+    product: "individual",
+    status: "successful",
+    price: "1000",
+  },
+  {
+    id: 10,
     icon_src: sub_user_icon,
     fullName: "Seyi Bolufemi TrackMeNg",
     userName: "Ad_Commander",
