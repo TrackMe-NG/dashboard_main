@@ -50,7 +50,11 @@ export const UsersComps = () => {
                           </div>
                         </div>
 
-                        <div className="table_data_product">
+                        <div
+                          className={`table_data_product ${
+                            isCustomerRoute ? "pageProductWidth" : ""
+                          }`}
+                        >
                           <h5 className="primary_text">{product} security</h5>
                         </div>
                         <div className="table_data_status">
