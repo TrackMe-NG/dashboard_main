@@ -30,3 +30,4 @@ export { default as eclipse_icon } from "./eclipse_icon.svg";
 export { default as star_fill_icon } from "./star_fill_icon.svg";
 export { default as star_outline_icon } from "./star_outline_icon.svg";
 export { default as reviews_user_icon } from "./reviews_user_icon.svg";
+export { default as revenue_chart } from "./revenue_chart.svg";
