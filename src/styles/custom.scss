@@ -240,6 +240,10 @@
   flex-shrink: 0;
   padding: 1rem;
 
+  &.isCustomerMainHeight {
+    height: 37.3dvh;
+  }
+
   &_header {
     color: $light_dark;
     font-size: 1.0625rem;
@@ -269,10 +273,14 @@
   &_box {
     &_main {
       display: grid;
-      gap: 0.5rem;
+      gap: 1rem;
       margin-top: 1.5rem;
       height: 16dvh;
       overflow-y: scroll;
+
+      &.isCustomerHeight {
+        height: 29.5dvh;
+      }
 
       &::-webkit-scrollbar {
         display: none;
@@ -488,6 +496,8 @@
   }
   &_right {
     width: 25%;
+    display: grid;
+    gap: 0.5rem;
   }
 }
 
