@@ -423,3 +423,59 @@
     text-transform: capitalize;
   }
 }
+
+/* REVENUE STYLES */
+.revenue {
+  background: $white;
+  color: $light_dark;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 37.4dvh;
+  flex-shrink: 0;
+
+  &_inner {
+    padding: 1.5rem;
+
+    h4 {
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1.5625rem;
+      letter-spacing: 0.02375rem;
+      text-transform: capitalize;
+    }
+
+    img {
+      width: 100%;
+      max-width: 12rem;
+      aspect-ratio: 1/1;
+      margin: 1rem auto;
+    }
+  }
+
+  &_bottom {
+    ul {
+      display: grid;
+      gap: 1rem;
+      font-size: 1.0625rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1.375rem;
+      letter-spacing: -0.0255rem;
+
+      .colored_box {
+        content: "";
+        padding: 0.1rem 0.7rem;
+        border-radius: 0.3125rem;
+        margin-inline: 0.5rem 1rem;
+
+        &.first {
+          background: $btn_bg;
+        }
+        &.second {
+          background: $coloredBox2;
+        }
+      }
+    }
+  }
+}
