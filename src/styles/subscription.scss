@@ -107,8 +107,7 @@
           width: 33%;
 
           &.pageProfileWidth {
-            width: 50%;
-            border: 1px solid red;
+            width: 190%;
           }
 
           & > div {
@@ -124,6 +123,10 @@
 
         &_product {
           width: 31%;
+
+          &.pageProductWidth {
+            width: 200%;
+          }
         }
 
         &_status {
