@@ -19,7 +19,7 @@ export const UsersComps = () => {
               <ul>
                 <li>Profile</li>
                 <li>Product</li>
-                <li>Location</li>
+                <li className="text_light_dark">Location</li>
               </ul>
             </div>
 
@@ -57,7 +57,11 @@ export const UsersComps = () => {
                         >
                           <h5 className="primary_text">{product} security</h5>
                         </div>
-                        <div className="table_data_status">
+                        <div
+                          className={`table_data_status ${
+                            isCustomerRoute ? "pageStatusWidth" : ""
+                          }`}
+                        >
                           <h5>
                             {state}, {country}
                           </h5>
