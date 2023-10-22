@@ -1,6 +1,6 @@
 .subscription {
   background: $white;
-  height: 49dvh;
+  height: 51dvh;
   border-radius: 0.5rem;
   overflow-y: hidden;
 
@@ -70,7 +70,7 @@
 
     &_data {
       overflow: scroll;
-      max-height: 32vh;
+      max-height: 34vh;
       margin-block: 1.5rem 0;
       display: grid;
       gap: 1rem;
