@@ -1,10 +1,13 @@
+import SettingsNav from "../(components)/SettingsNav";
 import DashboardLayout from "../layouts/DashboardLayout";
 
 export const Settings = () => {
   return (
     <>
       <DashboardLayout>
-        <p>hello world</p>
+        <div>
+          <SettingsNav />
+        </div>{" "}
       </DashboardLayout>
     </>
   );
