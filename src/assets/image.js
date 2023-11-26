@@ -1,10 +1,13 @@
 export { default as logo_icon } from "./logo_icon.svg";
 export { default as dashboard_white_icon } from "./dashboard_white_icon.svg";
 export { default as dashboard_dark_icon } from "./dashboard_dark_icon.svg";
+export { default as dashboard_primary_icon } from "./dashboard_primary_icon.svg";
 export { default as shopping_bag_icon } from "./shopping_bag_icon.svg";
 export { default as shopping_bag_white_icon } from "./shopping_bag_white_icon.svg";
+export { default as shopping_bag_primary_icon } from "./shopping_bag_primary_icon.svg";
 export { default as subscription_dark_icon } from "./subscription_dark_icon.svg";
 export { default as subscription_white_icon } from "./subscription_white_icon.svg";
+export { default as subscription_primary_icon } from "./subscription_primary_icon.svg";
 export { default as user_dark_icon } from "./user_dark_icon.svg";
 export { default as user_white_icon } from "./user_white_icon.svg";
 export { default as user_round_icon } from "./user_round_icon.svg";
