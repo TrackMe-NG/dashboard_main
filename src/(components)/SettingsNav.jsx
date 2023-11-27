@@ -13,7 +13,7 @@ const SettingsNav = () => {
       <div className="settings_nav_inner">
         <ul>
           {settingsItems.map((item) => (
-            <li key={item.id}>
+            <li className="hover_animation small" key={item.id}>
               <img src={item.icon_src} alt="nav-icon" />
               {item.title}
             </li>
