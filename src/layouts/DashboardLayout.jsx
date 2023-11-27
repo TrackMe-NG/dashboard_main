@@ -21,7 +21,7 @@ const DashboardLayout = ({ children }) => {
               </div>
 
               {/* MAIN CONTENTS */}
-              <div>{children}</div>
+              <div className="dashboard_main_contents">{children}</div>
             </div>
           </div>
         </div>
