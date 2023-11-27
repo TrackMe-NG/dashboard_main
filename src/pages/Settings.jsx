@@ -7,7 +7,7 @@ export const Settings = () => {
       <DashboardLayout>
         <div>
           <SettingsNav />
-        </div>{" "}
+        </div>
       </DashboardLayout>
     </>
   );
