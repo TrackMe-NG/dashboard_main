@@ -36,6 +36,11 @@
         gap: 0.5rem;
       }
     }
+
+    &_contents {
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
   }
 
   &_bottom_sec {
@@ -545,5 +550,41 @@
     margin: 0 auto;
     padding: 0.875rem 1.25rem;
     border: 1px solid $btn_bg;
+  }
+}
+
+/* SETTINGS NAV  STYLES */
+.settings {
+  &_nav {
+    background: $white;
+    height: 80.5dvh;
+    width: 20rem;
+    &_inner {
+      @include flex_center();
+      padding: 1.5rem;
+      ul {
+        display: grid;
+        gap: 0.5rem;
+        li {
+          cursor: pointer;
+          width: 15rem;
+          height: 3.5rem;
+          padding: 0.625rem 1rem 0.625rem 1.5rem;
+          border-radius: 0.875rem;
+          @include flex_center();
+          justify-content: flex-start;
+          gap: 1rem;
+          text-transform: capitalize;
+          font-size: 1rem;
+
+          &:hover,
+          &.active {
+            background: $settings_active;
+            color: $btn_bg;
+            font-weight: 600;
+          }
+        }
+      }
+    }
   }
 }
