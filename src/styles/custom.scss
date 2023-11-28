@@ -149,7 +149,7 @@
     height: 10.125rem;
     border-radius: 1.25rem;
     background: $white;
-    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: $shadow_btn;
     padding: 1rem;
     overflow: hidden;
     &_inner {
@@ -556,16 +556,35 @@
 /* SETTINGS STYLES */
 .settings {
   &_sec {
-    background: $white;
+    width: 100%;
+  }
+  /* SETTINGS MAIN STYLES */
+  &_main {
+    &_inner {
+      height: 80.5dvh;
+      overflow-y: hidden;
+      background: $white;
+      @include flex_center();
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.5rem;
+      padding-left: 0;
+    }
+
+    &_right {
+      width: 100%;
+    }
   }
 
+  /* SETTINGS NAV */
   &_nav {
     background: $white;
-    height: 80.5dvh;
     width: 20rem;
+    height: 75dvh;
+    border-right: 1px solid $btn_light_text;
     &_inner {
       @include flex_center();
-      padding: 1.5rem;
       ul {
         display: grid;
         gap: 0.5rem;
@@ -586,6 +605,162 @@
             background: $settings_active;
             color: $btn_bg;
             font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  /* SETTINGS HEADER */
+
+  &_header {
+    &_inner {
+      @include flex_center();
+      justify-content: space-between;
+      width: 100%;
+      border-bottom: 1px solid $btn_light_text;
+      padding-bottom: 1.5rem;
+    }
+
+    &_left {
+      h4 {
+        color: $light_dark;
+        font-size: 1.375rem;
+        font-weight: 700;
+        line-height: 1.75rem; /* 127.273% */
+        letter-spacing: 0.02188rem;
+        text-transform: capitalize;
+      }
+
+      p {
+        color: $light_nav_text;
+        font-size: 0.9375rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.25rem; /* 133.333% */
+        letter-spacing: -0.03125rem;
+      }
+    }
+
+    &_right {
+      @include flex_center();
+      gap: 1.5rem;
+
+      button {
+        text-transform: capitalize;
+        width: 10rem;
+        height: 3.125rem;
+        padding: 0.875rem 1.25rem;
+        border-radius: 0.5rem;
+        outline: 1px solid $btn_bg;
+        box-shadow: $shadow_btn;
+        text-align: center;
+        font-size: 1.0625rem;
+        font-weight: 600;
+        line-height: 1.375rem;
+        letter-spacing: -0.0255rem;
+
+        &:nth-child(1) {
+          color: $btn_bg;
+        }
+        &:last-child {
+          color: $white;
+          background: $btn_bg;
+        }
+      }
+    }
+  }
+
+  /* SETTINGS ACCT */
+
+  &_acct {
+    margin-top: 2rem;
+
+    &_inner {
+      h5 {
+        color: $acct_header;
+        font-size: 1.0625rem;
+        line-height: 1.375rem;
+        letter-spacing: -0.0255rem;
+        width: fit-content;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid $acct_header;
+      }
+      /* USER DETAILS */
+      .user {
+        &_details {
+          margin: 1.5rem 0;
+
+          &_inner {
+            @include flex_center();
+            justify-content: space-between;
+            gap: 1rem;
+            max-width: 90%;
+          }
+
+          &_left {
+            width: 100%;
+            max-width: 20em;
+            @include flex_center();
+            justify-content: flex-start;
+            gap: 1rem;
+            text-transform: capitalize;
+
+            img {
+              border-radius: 6.25rem;
+              background: $placeholder_img;
+              @include flex_center();
+              width: 100%;
+              max-width: 4rem;
+              aspect-ratio: 1/1;
+              padding: 0.625rem;
+            }
+
+            h6 {
+              color: $light_dark;
+              width: fit-content;
+              font-size: 1.0625rem;
+              line-height: 1.375rem; /* 129.412% */
+              letter-spacing: -0.0255rem;
+            }
+
+            span {
+              color: $btn_bg;
+              font-size: 0.9375rem;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 1.5rem; /* 133.333% */
+              letter-spacing: -0.03125rem;
+            }
+          }
+
+          &_right {
+            @include flex_center();
+            gap: 1.5rem;
+
+            button {
+              width: fit-content;
+              height: 3.125rem;
+              padding: 0.875rem 2rem;
+              border-radius: 0.5rem;
+              box-shadow: $shadow_btn;
+              text-transform: capitalize;
+              border-radius: 0.5rem;
+              outline: 1px solid $btn_bg;
+              text-align: center;
+              font-size: 1.0625rem;
+              font-weight: 600;
+              line-height: 1.375rem;
+              letter-spacing: -0.0255rem;
+
+              &:nth-child(1) {
+                color: $white;
+                background: $btn_bg;
+              }
+              &:last-child {
+                color: $btn_bg;
+              }
+            }
           }
         }
       }
