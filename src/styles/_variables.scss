@@ -5,9 +5,23 @@
   align-items: center;
 }
 
-/* BUTTON VARIABLES */
+@mixin hover_animation {
+  scale: 1;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 
-.btn_main {
+  &:hover {
+    scale: 1.2;
+  }
+
+  &.small {
+    &:hover {
+      scale: 1.1;
+    }
+  }
+}
+
+@mixin btn_main {
   @include flex_center();
   height: 2.5rem;
   padding: 0.875rem 1.25rem;
@@ -31,21 +45,15 @@
   }
 }
 
+/* BUTTON VARIABLES */
+
+.btn_main {
+  @include flex_center();
+}
+
 /* HOVER ANIMATIONS */
 .hover_animation {
-  scale: 1;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-
-  &:hover {
-    scale: 1.2;
-  }
-
-  &.small {
-    &:hover {
-      scale: 1.1;
-    }
-  }
+  @include hover_animation();
 }
 
 /* BG */
