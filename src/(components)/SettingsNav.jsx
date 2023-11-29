@@ -1,23 +1,26 @@
-import {
-  dashboard_dark_icon,
-  dashboard_primary_icon,
-  shopping_bag_icon,
-  shopping_bag_primary_icon,
-  subscription_dark_icon,
-  subscription_primary_icon,
-} from "../assets/image";
-import AccountSettings from "./(SettingsComps)/AccountSettings";
-import Notification from "./(SettingsComps)/Notification";
-import Security from "./(SettingsComps)/Security";
+import PropTypes from "prop-types";
 
-const SettingsNav = () => {
+const SettingsNav = ({ settingsItems, selectedItem, onItemClick }) => {
   return (
     <aside className="settings_nav">
       <div className="settings_nav_inner">
         <ul>
           {settingsItems.map((item) => (
-            <li className="hover_animation small" key={item.id}>
-              <img src={item.icon_src} alt="nav-icon" />
+            <li
+              className={`hover_animation small ${
+                selectedItem.id === item.id ? "active" : ""
+              }`}
+              key={item.id}
+              onClick={() => onItemClick(item)}
+            >
+              <img
+                src={
+                  selectedItem.id === item.id
+                    ? item.icon_src_active
+                    : item.icon_src
+                }
+                alt="nav-icon"
+              />
               {item.title}
             </li>
           ))}
@@ -27,30 +30,10 @@ const SettingsNav = () => {
   );
 };
 
+SettingsNav.propTypes = {
+  settingsItems: PropTypes.array.isRequired,
+  selectedItem: PropTypes.object.isRequired,
+  onItemClick: PropTypes.func.isRequired,
+};
+
 export default SettingsNav;
-
-const settingsItems = [
-  {
-    id: 1,
-    icon_src: dashboard_dark_icon,
-    icon_src_active: dashboard_primary_icon,
-    title: "account settings",
-    comps: <AccountSettings />,
-  },
-
-  {
-    id: 2,
-    icon_src: shopping_bag_icon,
-    icon_src_active: shopping_bag_primary_icon,
-    title: "Security",
-    comps: <Security />,
-  },
-
-  {
-    id: 3,
-    icon_src: subscription_dark_icon,
-    icon_src_active: subscription_primary_icon,
-    title: "Notification",
-    comps: <Notification />,
-  },
-];
