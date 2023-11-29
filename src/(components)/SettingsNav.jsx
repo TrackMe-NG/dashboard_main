@@ -6,6 +6,9 @@ import {
   subscription_dark_icon,
   subscription_primary_icon,
 } from "../assets/image";
+import AccountSettings from "./(SettingsComps)/AccountSettings";
+import Notification from "./(SettingsComps)/Notification";
+import Security from "./(SettingsComps)/Security";
 
 const SettingsNav = () => {
   return (
@@ -32,7 +35,7 @@ const settingsItems = [
     icon_src: dashboard_dark_icon,
     icon_src_active: dashboard_primary_icon,
     title: "account settings",
-    link: "/",
+    comps: <AccountSettings />,
   },
 
   {
@@ -40,7 +43,7 @@ const settingsItems = [
     icon_src: shopping_bag_icon,
     icon_src_active: shopping_bag_primary_icon,
     title: "Security",
-    link: "/",
+    comps: <Security />,
   },
 
   {
@@ -48,6 +51,6 @@ const settingsItems = [
     icon_src: subscription_dark_icon,
     icon_src_active: subscription_primary_icon,
     title: "Notification",
-    link: "/",
+    comps: <Notification />,
   },
 ];
