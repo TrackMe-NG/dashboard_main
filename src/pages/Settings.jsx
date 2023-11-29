@@ -46,6 +46,66 @@ export const Settings = () => {
                     </div>
                   </div>
                 </div>
+
+                {/* USER FORM */}
+
+                <div className="user_form">
+                  <div className="user_form_inner">
+                    <div className="information_sec">
+                      <h5>information</h5>
+
+                      <div className="user_form_inputs">
+                        {/*  */}
+                        <div>
+                          <span>username</span>
+                          <input type="text" />
+                        </div>
+                        {/*  */}
+                        <div>
+                          <span>email address</span>
+                          <input type="text" />
+                        </div>
+                        {/*  */}
+                        <div>
+                          <span>phone number</span>
+                          <input type="text" />
+                        </div>
+                        {/*  */}
+                        <div>
+                          <span>fax</span>
+                          <input type="text" />
+                        </div>
+                      </div>
+                    </div>
+                    {/*  */}
+                    <div className="address_sec">
+                      <h5>address</h5>
+
+                      <div className="user_form_inputs">
+                        {/*  */}
+                        <div>
+                          <span>country</span>
+                          <input type="text" />
+                        </div>
+                        {/*  */}
+                        <div>
+                          <span>state</span>
+                          <input type="text" />
+                        </div>
+                        {/*  */}
+                        <div>
+                          <span>local govt</span>
+                          <input type="text" />
+                        </div>
+                        {/*  */}
+                        <div>
+                          <span>postal code</span>
+                          <input type="text" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
