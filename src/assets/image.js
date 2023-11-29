@@ -21,6 +21,7 @@ export { default as search_icon } from "./search_icon.svg";
 export { default as mic_icon } from "./mic_icon.svg";
 export { default as default_img } from "./default_img.svg";
 export { default as switch_icon } from "./switch_icon.svg";
+export { default as switch_active_icon } from "./switch_active_icon.svg";
 export { default as chat_dark_icon } from "./chat_dark_icon.svg";
 export { default as bell_dark_icon } from "./bell_dark_icon.svg";
 export { default as calender_icon } from "./calender_icon.svg";
