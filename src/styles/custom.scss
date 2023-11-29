@@ -677,15 +677,6 @@
     margin-top: 1rem;
 
     &_inner {
-      & > h5 {
-        color: $acct_header;
-        font-size: 1.0625rem;
-        line-height: 1.375rem;
-        letter-spacing: -0.0255rem;
-        width: fit-content;
-        padding-bottom: 0.5rem;
-        border-bottom: 2px solid $acct_header;
-      }
       /* USER DETAILS */
       .user {
         &_details {
