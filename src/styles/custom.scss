@@ -674,10 +674,10 @@
   /* SETTINGS ACCT */
 
   &_acct {
-    margin-top: 2rem;
+    margin-top: 1rem;
 
     &_inner {
-      h5 {
+      & > h5 {
         color: $acct_header;
         font-size: 1.0625rem;
         line-height: 1.375rem;
@@ -759,6 +759,57 @@
               }
               &:last-child {
                 color: $btn_bg;
+              }
+            }
+          }
+        }
+
+        /* USER FORM */
+        &_form {
+          // border: 1px solid red;
+          // overflow-y: scroll;
+          // max-height: 52vh;
+          // padding-block: 0 0.5rem;
+          // &::-webkit-scrollbar {
+          //   display: none;
+          // }
+          &_inner {
+            h5 {
+              text-transform: capitalize;
+              color: $light_dark;
+              font-size: 1.0625rem;
+              font-weight: 600;
+              line-height: 1.375rem; /* 129.412% */
+              letter-spacing: -0.0255rem;
+              margin-block: 1rem 0.5rem;
+            }
+          }
+
+          &_inputs {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 1.5rem;
+            div {
+              display: grid;
+              gap: 0.5rem;
+              margin-top: 0.2rem;
+
+              span {
+                text-transform: capitalize;
+                color: $input_label;
+                font-size: 0.9375rem;
+                font-weight: 500;
+                line-height: 1.25rem; /* 133.333% */
+                letter-spacing: -0.015rem;
+              }
+
+              input {
+                width: 100%;
+                height: 3.5rem;
+                border-radius: 0.3125rem;
+                outline: 1px solid $light_bg;
+                background: $light_bg;
+                padding: 0 0.5rem;
               }
             }
           }
