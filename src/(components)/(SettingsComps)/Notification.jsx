@@ -1,3 +1,5 @@
+import { switch_active_icon } from "../../assets/image";
+
 const Notification = () => {
   return (
     <section className="notification_sec">
@@ -17,7 +19,66 @@ const Notification = () => {
         </div>
 
         {/* MAIN */}
-        <h4>Notification</h4>
+        <div className="notification_main">
+          <div className="notification_main_inner">
+            <ul>
+              {/*  */}
+              <li>
+                <div>
+                  <h6>Security Alerts</h6>
+                  <p>Adjust your security settings here you want here</p>
+                </div>
+
+                <img src={switch_active_icon} alt="switch-icon" />
+              </li>
+              {/*  */}
+              <li>
+                <div>
+                  <h6>Security Alerts</h6>
+                  <p>Adjust your security settings here you want here</p>
+                </div>
+
+                <img src={switch_active_icon} alt="switch-icon" />
+              </li>
+              {/*  */}
+              <li>
+                <div>
+                  <h6>Security Alerts</h6>
+                  <p>Adjust your security settings here you want here</p>
+                </div>
+
+                <img src={switch_active_icon} alt="switch-icon" />
+              </li>
+              {/*  */}
+              <li>
+                <div>
+                  <h6>Security Alerts</h6>
+                  <p>Adjust your security settings here you want here</p>
+                </div>
+
+                <img src={switch_active_icon} alt="switch-icon" />
+              </li>
+              {/*  */}
+              <li>
+                <div>
+                  <h6>Security Alerts</h6>
+                  <p>Adjust your security settings here you want here</p>
+                </div>
+
+                <img src={switch_active_icon} alt="switch-icon" />
+              </li>
+              {/*  */}
+              <li>
+                <div>
+                  <h6>Security Alerts</h6>
+                  <p>Adjust your security settings here you want here</p>
+                </div>
+
+                <img src={switch_active_icon} alt="switch-icon" />
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   );
