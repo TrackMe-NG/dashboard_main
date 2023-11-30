@@ -36,6 +36,11 @@
         gap: 0.5rem;
       }
     }
+
+    &_contents {
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
   }
 
   &_bottom_sec {
@@ -144,7 +149,7 @@
     height: 10.125rem;
     border-radius: 1.25rem;
     background: $white;
-    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: $shadow_btn;
     padding: 1rem;
     overflow: hidden;
     &_inner {
@@ -545,5 +550,355 @@
     margin: 0 auto;
     padding: 0.875rem 1.25rem;
     border: 1px solid $btn_bg;
+  }
+}
+
+/* SETTINGS STYLES */
+.settings {
+  &_sec {
+    width: 100%;
+  }
+  /* SETTINGS MAIN STYLES */
+  &_main {
+    &_inner {
+      height: 80.5dvh;
+      overflow-y: hidden;
+      background: $white;
+      @include flex_center();
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.5rem;
+      padding-left: 0;
+    }
+
+    &_right {
+      width: 100%;
+    }
+  }
+
+  /* SETTINGS NAV */
+  &_nav {
+    background: $white;
+    width: 20rem;
+    height: 75dvh;
+    border-right: 1px solid $btn_light_text;
+    &_inner {
+      @include flex_center();
+      ul {
+        display: grid;
+        gap: 0.5rem;
+        li {
+          cursor: pointer;
+          width: 15rem;
+          height: 3.5rem;
+          padding: 0.625rem 1rem 0.625rem 1.5rem;
+          border-radius: 0.875rem;
+          @include flex_center();
+          justify-content: flex-start;
+          gap: 1rem;
+          text-transform: capitalize;
+          font-size: 1rem;
+
+          &:hover,
+          &.active {
+            background: $settings_active;
+            color: $btn_bg;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  /* SETTINGS HEADER */
+
+  &_header {
+    &_inner {
+      @include flex_center();
+      justify-content: space-between;
+      width: 100%;
+      border-bottom: 1px solid $btn_light_text;
+      padding-bottom: 1.5rem;
+    }
+
+    &_left {
+      h4 {
+        color: $light_dark;
+        font-size: 1.375rem;
+        font-weight: 700;
+        line-height: 1.75rem; /* 127.273% */
+        letter-spacing: 0.02188rem;
+        text-transform: capitalize;
+      }
+
+      p {
+        color: $light_nav_text;
+        font-size: 0.9375rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.25rem; /* 133.333% */
+        letter-spacing: -0.03125rem;
+      }
+    }
+
+    &_right {
+      @include flex_center();
+      gap: 1.5rem;
+
+      button {
+        text-transform: capitalize;
+        width: 10rem;
+        height: 3.125rem;
+        padding: 0.875rem 1.25rem;
+        border-radius: 0.5rem;
+        outline: 1px solid $btn_bg;
+        box-shadow: $shadow_btn;
+        text-align: center;
+        font-size: 1.0625rem;
+        font-weight: 600;
+        line-height: 1.375rem;
+        letter-spacing: -0.0255rem;
+
+        &:nth-child(1) {
+          color: $btn_bg;
+        }
+        &:last-child {
+          color: $white;
+          background: $btn_bg;
+        }
+      }
+    }
+  }
+
+  /* SETTINGS ACCT */
+
+  &_acct {
+    margin-top: 1rem;
+
+    &_inner {
+      /* USER DETAILS */
+      .user {
+        &_details {
+          margin: 1.5rem 0;
+
+          &_inner {
+            @include flex_center();
+            justify-content: space-between;
+            gap: 1rem;
+            max-width: 90%;
+          }
+
+          &_left {
+            width: 100%;
+            max-width: 20em;
+            @include flex_center();
+            justify-content: flex-start;
+            gap: 1rem;
+            text-transform: capitalize;
+
+            img {
+              border-radius: 6.25rem;
+              background: $placeholder_img;
+              @include flex_center();
+              width: 100%;
+              max-width: 4rem;
+              aspect-ratio: 1/1;
+              padding: 0.625rem;
+            }
+
+            h6 {
+              color: $light_dark;
+              width: fit-content;
+              font-size: 1.0625rem;
+              line-height: 1.375rem; /* 129.412% */
+              letter-spacing: -0.0255rem;
+            }
+
+            span {
+              color: $btn_bg;
+              font-size: 0.9375rem;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 1.5rem; /* 133.333% */
+              letter-spacing: -0.03125rem;
+            }
+          }
+
+          &_right {
+            @include flex_center();
+            gap: 1.5rem;
+
+            button {
+              width: fit-content;
+              height: 3.125rem;
+              padding: 0.875rem 2rem;
+              border-radius: 0.5rem;
+              box-shadow: $shadow_btn;
+              text-transform: capitalize;
+              border-radius: 0.5rem;
+              outline: 1px solid $btn_bg;
+              text-align: center;
+              font-size: 1.0625rem;
+              font-weight: 600;
+              line-height: 1.375rem;
+              letter-spacing: -0.0255rem;
+
+              &:nth-child(1) {
+                color: $white;
+                background: $btn_bg;
+              }
+              &:last-child {
+                color: $btn_bg;
+              }
+            }
+          }
+        }
+
+        /* USER FORM */
+        &_form {
+          // border: 1px solid red;
+          // overflow-y: scroll;
+          // max-height: 52vh;
+          // padding-block: 0 0.5rem;
+          // &::-webkit-scrollbar {
+          //   display: none;
+          // }
+          &_inner {
+            h5 {
+              text-transform: capitalize;
+              color: $light_dark;
+              font-size: 1.0625rem;
+              font-weight: 600;
+              line-height: 1.375rem; /* 129.412% */
+              letter-spacing: -0.0255rem;
+              margin-block: 1rem 0.5rem;
+            }
+          }
+
+          &_inputs {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 1.5rem;
+            div {
+              display: grid;
+              gap: 0.5rem;
+              margin-top: 0.2rem;
+
+              span {
+                text-transform: capitalize;
+                color: $input_label;
+                font-size: 0.9375rem;
+                font-weight: 500;
+                line-height: 1.25rem; /* 133.333% */
+                letter-spacing: -0.015rem;
+              }
+
+              input {
+                width: 100%;
+                height: 3.5rem;
+                border-radius: 0.3125rem;
+                outline: 1px solid $light_bg;
+                background: $light_bg;
+                padding: 0 0.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* SECURITY SEC STYLES */
+
+.security {
+  &_main {
+    div {
+      h5 {
+        margin-block: 1.8rem 1rem;
+      }
+
+      ul {
+        display: grid;
+        gap: 2rem;
+        li {
+          @include flex_center();
+          justify-content: flex-start;
+
+          div {
+            display: grid;
+            width: 90%;
+            gap: 0.5rem;
+
+            h6 {
+              color: $light_dark;
+              font-size: 1.0625rem;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 1.375rem; /* 129.412% */
+              letter-spacing: -0.0255rem;
+            }
+
+            p {
+              color: $light_nav_text;
+              font-size: 0.9375rem;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 1.25rem; /* 133.333% */
+              letter-spacing: -0.03125rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* NOTIFICATION SEC STYLES */
+.notification {
+  &_main {
+    &_inner {
+      padding-block: 2rem 0;
+    }
+
+    div {
+      h5 {
+        margin-block: 1.8rem 1rem;
+      }
+
+      ul {
+        display: grid;
+        gap: 2rem;
+        li {
+          @include flex_center();
+          justify-content: flex-start;
+
+          div {
+            display: grid;
+            width: 90%;
+            gap: 0.5rem;
+
+            h6 {
+              color: $light_dark;
+              font-size: 1.0625rem;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 1.375rem; /* 129.412% */
+              letter-spacing: -0.0255rem;
+            }
+
+            p {
+              color: $light_nav_text;
+              font-size: 0.9375rem;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 1.25rem; /* 133.333% */
+              letter-spacing: -0.03125rem;
+            }
+          }
+        }
+      }
+    }
   }
 }
