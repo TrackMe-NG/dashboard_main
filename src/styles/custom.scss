@@ -854,3 +854,51 @@
     }
   }
 }
+
+/* NOTIFICATION SEC STYLES */
+.notification {
+  &_main {
+    &_inner {
+      padding-block: 2rem 0;
+    }
+
+    div {
+      h5 {
+        margin-block: 1.8rem 1rem;
+      }
+
+      ul {
+        display: grid;
+        gap: 2rem;
+        li {
+          @include flex_center();
+          justify-content: flex-start;
+
+          div {
+            display: grid;
+            width: 90%;
+            gap: 0.5rem;
+
+            h6 {
+              color: $light_dark;
+              font-size: 1.0625rem;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 1.375rem; /* 129.412% */
+              letter-spacing: -0.0255rem;
+            }
+
+            p {
+              color: $light_nav_text;
+              font-size: 0.9375rem;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 1.25rem; /* 133.333% */
+              letter-spacing: -0.03125rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
