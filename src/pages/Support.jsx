@@ -117,7 +117,7 @@ export const Support = () => {
                       <img src={mic_icon2} alt="icon" />
                     </div>
 
-                    <button>
+                    <button className="hover_animation small">
                       <img src={send_icon} alt="icon" />
                     </button>
                   </div>
