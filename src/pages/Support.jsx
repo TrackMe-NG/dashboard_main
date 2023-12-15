@@ -76,7 +76,7 @@ export const Support = () => {
                           elit feugiat ante lacus integer amet ornare. Vitae mi
                           adipiscing viverra hac. Elit facilisis fames non
                           potenti cursus et dui. Sit pharetra faucibus gravida
-                          odio proin nisi pellentesque.{" "}
+                          odio proin nisi pellentesque.
                         </p>
                       </div>
 
