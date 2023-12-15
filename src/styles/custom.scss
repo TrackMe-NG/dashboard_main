@@ -1075,8 +1075,17 @@
 
     /* MIDDLE */
     &_middle {
-      background: $btn_light_text;
+      background-color: $btn_light_text;
       height: 62.6dvh;
+      background-image: url("../assets/support_chat_bg.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      overflow: scroll;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
 
     /* BOTTOM */
