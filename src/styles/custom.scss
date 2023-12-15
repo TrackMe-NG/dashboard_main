@@ -1082,9 +1082,62 @@
       background-repeat: no-repeat;
       background-size: contain;
       overflow: scroll;
+      padding: 2rem 1.5rem;
 
       &::-webkit-scrollbar {
         display: none;
+      }
+
+      &_inner {
+        display: grid;
+        gap: 1.5rem;
+
+        p {
+          font-size: 0.9rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 1.3rem;
+          width: 100%;
+          max-width: 30rem;
+          padding: 0.8rem;
+
+          &.time_format {
+            text-align: right;
+            color: rgba(0, 0, 0, 0.5);
+            font-size: 0.8rem;
+            font-weight: 600;
+            line-height: 0;
+            letter-spacing: 0.00375rem;
+
+            span {
+              font-weight: 400;
+            }
+          }
+        }
+      }
+
+      &_left {
+        width: fit-content;
+        height: fit-content;
+        &_inner {
+          border-radius: 0rem 0.625rem 0.625rem 0.625rem;
+          background: $white;
+          color: $light_dark;
+        }
+      }
+
+      &_right {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+        &_inner {
+          background: $btn_bg;
+          color: $white;
+          border-radius: 0.625rem 0rem 0.625rem 0.625rem;
+        }
       }
     }
 
