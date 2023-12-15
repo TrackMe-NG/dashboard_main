@@ -922,6 +922,7 @@
     background: $white;
     width: 100%;
     max-width: 22rem;
+    border-right: 3px solid $btn_light_text;
 
     &_top {
       ul {
@@ -1018,6 +1019,54 @@
                 line-height: 1.25rem; /* 133.333% */
                 letter-spacing: -0.015rem;
               }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* CHATBOX */
+
+  &_chatbox {
+    height: 100%;
+    width: 100%;
+    background-color: $white;
+
+    /* TOP */
+    &_top {
+      ul {
+        padding: 0.9rem 1.5rem;
+        li {
+          @include flex_center();
+          justify-content: flex-start;
+          gap: 1rem;
+
+          img {
+            border-radius: 6.25rem;
+            background: $placeholder_img;
+            padding: 0.9rem;
+          }
+
+          div {
+            display: grid;
+            gap: 0.3rem;
+            h3 {
+              color: $light_dark;
+              font-size: 0.9375rem;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 1.25rem;
+              letter-spacing: -0.03125rem;
+            }
+
+            span {
+              color: $btn_bg;
+              font-size: 0.9375rem;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 1.25rem;
+              letter-spacing: -0.015rem;
             }
           }
         }
