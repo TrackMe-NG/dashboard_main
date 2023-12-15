@@ -908,7 +908,7 @@
 .support {
   width: 100%;
   height: 100%;
-  max-height: 80.8dvh;
+  max-height: 80.5dvh;
   overflow: hidden;
 
   &_inner {
@@ -971,20 +971,36 @@
         ul {
           display: grid;
           gap: 1rem;
-          max-height: 100%;
+          height: 100%;
+          max-height: 36.5rem;
           overflow: scroll;
+          padding-bottom: 0.5rem;
+
+          &::-webkit-scrollbar {
+            display: none;
+          }
 
           li {
             @include flex_center();
-            gap: 0.5rem;
+            gap: 1rem;
+            cursor: pointer;
+            padding: 1rem 0;
+
+            &:hover {
+              background: $btn_light_text;
+            }
 
             img {
               border-radius: 6.25rem;
               background: $placeholder_img;
-              padding: 1rem;
+              padding: 0.9rem;
             }
 
             div {
+              border-bottom: 1px solid $btn_light_text;
+              display: grid;
+              gap: 0.2rem;
+              padding-bottom: 0.5rem;
               h3 {
                 color: $light_dark;
                 font-size: 0.9375rem;
