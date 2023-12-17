@@ -1,7 +1,9 @@
+import { useEffect, useState } from "react";
 import {
   dashboard_dark_icon,
   dashboard_white_icon,
   logo_icon,
+  logo_icon2,
   logout_icon,
   settings_dark_icon,
   settings_white_icon,
@@ -29,13 +31,31 @@ export const SideNav = () => {
     navigate(item.link);
   };
 
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <aside className="sidebar">
         <div className="sidebar_inner">
           <div className="sidebar_logo">
             <a href="/">
-              <img src={logo_icon} alt="logo" />
+              <img
+                src={screenWidth > 1024 ? logo_icon : logo_icon2}
+                alt="logo"
+                loading="lazy"
+              />
             </a>
           </div>
 
