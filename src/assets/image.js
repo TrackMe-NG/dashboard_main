@@ -1,4 +1,5 @@
 export { default as logo_icon } from "./logo_icon.svg";
+export { default as logo_icon2 } from "./logo_icon2.png";
 export { default as dashboard_white_icon } from "./dashboard_white_icon.svg";
 export { default as dashboard_dark_icon } from "./dashboard_dark_icon.svg";
 export { default as dashboard_primary_icon } from "./dashboard_primary_icon.svg";
