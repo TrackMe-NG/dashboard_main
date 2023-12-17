@@ -48,7 +48,7 @@
 /* BUTTON VARIABLES */
 
 .btn_main {
-  @include flex_center();
+  @include btn_main();
 }
 
 /* HOVER ANIMATIONS */
