@@ -1,5 +1,5 @@
 .sidebar {
-  width: 17rem;
+  // width: 17rem;
   height: 96.5vh;
   @include flex_center();
   align-items: flex-start;
@@ -9,19 +9,22 @@
   &_inner {
     display: grid;
     gap: 1.5rem;
+    padding: 0.5rem;
   }
 
   &_logo {
     @include flex_center();
+    // display: none !important;
   }
 
   &_menu_list {
     display: grid;
     gap: 0.6rem;
     li {
-      width: 15.25rem;
+      // width: 15.25rem;
       height: 3.5rem;
-      padding: 0.625rem 1rem 0.625rem 1.5rem;
+      // padding: 0.625rem 1rem 0.625rem 1.5rem;
+      padding: 1rem;
       border-radius: 0.875rem;
       @include flex_center();
       justify-content: flex-start;
@@ -54,11 +57,17 @@
           outline: 1px solid $logout;
         }
       }
+
+      span {
+        display: none;
+      }
     }
   }
 
   &_update {
-    display: grid;
+    display: none !important;
+    // display: grid;
+
     place-items: center;
     justify-content: center;
     width: 13.75rem;
