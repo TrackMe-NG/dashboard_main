@@ -162,7 +162,10 @@
           }
 
           &.pageStatusWidth {
-            width: fit-content;
+            min-width: fit-content;
+            @media screen and (min-width: 1400px) {
+              width: fit-content;
+            }
           }
         }
 
