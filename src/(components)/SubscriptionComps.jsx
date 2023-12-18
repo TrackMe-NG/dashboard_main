@@ -87,7 +87,7 @@ const usersData = [
   {
     id: 1,
     icon_src: sub_user_icon,
-    fullName: "Omosanyin Elijah Ayomide",
+    fullName: "Omosanyin Elijah A",
     userName: "Sanyins_UX",
     product: "individual",
     status: "Declined",
@@ -96,7 +96,7 @@ const usersData = [
   {
     id: 2,
     icon_src: sub_user_icon,
-    fullName: "Omosanyin Elijah Ayomide",
+    fullName: "Omosanyin Elijah A",
     userName: "Sanyins_UX",
     product: "individual",
     status: "pending",
@@ -105,7 +105,7 @@ const usersData = [
   {
     id: 3,
     icon_src: sub_user_icon,
-    fullName: "Omosanyin Elijah Ayomide",
+    fullName: "Omosanyin Elijah A",
     userName: "Sanyins_UX",
     product: "individual",
     status: "successful",
@@ -114,7 +114,7 @@ const usersData = [
   {
     id: 4,
     icon_src: sub_user_icon,
-    fullName: "Omosanyin Elijah Ayomide",
+    fullName: "Omosanyin Elijah A",
     userName: "Sanyins_UX",
     product: "individual",
     status: "successful",
@@ -123,7 +123,7 @@ const usersData = [
   {
     id: 5,
     icon_src: sub_user_icon,
-    fullName: "Omosanyin Elijah Ayomide",
+    fullName: "Omosanyin Elijah A",
     userName: "Sanyins_UX",
     product: "individual",
     status: "declined",
@@ -132,7 +132,7 @@ const usersData = [
   {
     id: 6,
     icon_src: sub_user_icon,
-    fullName: "Omosanyin Elijah Ayomide",
+    fullName: "Omosanyin Elijah A",
     userName: "Sanyins_UX",
     product: "individual",
     status: "pending",
@@ -141,7 +141,7 @@ const usersData = [
   {
     id: 7,
     icon_src: sub_user_icon,
-    fullName: "Omosanyin Elijah Ayomide",
+    fullName: "Omosanyin Elijah A",
     userName: "Sanyins_UX",
     product: "individual",
     status: "successful",
@@ -150,7 +150,7 @@ const usersData = [
   {
     id: 8,
     icon_src: sub_user_icon,
-    fullName: "Omosanyin Elijah Ayomide",
+    fullName: "Omosanyin Elijah A",
     userName: "Sanyins_UX",
     product: "individual",
     status: "declined",
@@ -159,7 +159,7 @@ const usersData = [
   {
     id: 9,
     icon_src: sub_user_icon,
-    fullName: "Omosanyin Elijah Ayomide",
+    fullName: "Omosanyin Elijah A",
     userName: "Sanyins_UX",
     product: "individual",
     status: "successful",
@@ -168,7 +168,7 @@ const usersData = [
   {
     id: 10,
     icon_src: sub_user_icon,
-    fullName: "Seyi Bolufemi TrackMeNg",
+    fullName: "Seyi Bolufemi T",
     userName: "Ad_Commander",
     product: "private",
     status: "successful",

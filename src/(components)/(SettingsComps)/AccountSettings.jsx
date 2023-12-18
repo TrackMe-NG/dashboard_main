@@ -26,7 +26,7 @@ const AccountSettings = () => {
               <div className="user_details_left">
                 <img src={user_round_icon} alt="user" />
                 <div>
-                  <h6>Omosanyin Elijah Ayomide</h6>
+                  <h6>Omosanyin Elijah A</h6>
                   <span>admin</span>
                 </div>
               </div>
