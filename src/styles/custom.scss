@@ -782,14 +782,15 @@
 
         /* USER FORM */
         &_form {
-          // border: 1px solid red;
-          // overflow-y: scroll;
-          // max-height: 52vh;
-          // padding-block: 0 0.5rem;
-          // &::-webkit-scrollbar {
-          //   display: none;
-          // }
           &_inner {
+            height: auto;
+            max-height: 50dvh;
+            overflow: scroll;
+            padding: 0.2rem 0;
+
+            &::-webkit-scrollbar {
+              display: none;
+            }
             h5 {
               text-transform: capitalize;
               color: $light_dark;
