@@ -1,9 +1,9 @@
 .subscription {
   background: $white;
-  height: auto;
+  height: 100%;
+  max-height: auto;
   border-radius: 0.5rem;
   overflow-y: hidden;
-  border: 1px solid red;
 
   &_inner {
     padding: 1rem 0.5rem;
@@ -71,7 +71,8 @@
 
     &_data {
       overflow: scroll;
-      max-height: 34vh;
+      height: 100%;
+      max-height: 37.5dvh;
       margin-block: 1.5rem 0;
       display: grid;
       gap: 1rem;
@@ -143,18 +144,30 @@
         }
 
         &_product {
-          width: 31%;
+          width: 26.5%;
+
+          @media screen and (min-width: 1400px) {
+            width: 31%;
+          }
+
           &.pageProductWidth {
             width: 44%;
           }
         }
 
         &_status {
-          width: 30.3%;
+          width: 23%;
+          @media screen and (min-width: 1400px) {
+            width: 28%;
+          }
 
           &.pageStatusWidth {
             width: fit-content;
           }
+        }
+
+        &_price {
+          min-width: fit-content;
         }
       }
     }
