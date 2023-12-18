@@ -52,7 +52,7 @@ export const SideNav = () => {
           <div className="sidebar_logo">
             <a href="/">
               <img
-                src={screenWidth > 1024 ? logo_icon : logo_icon2}
+                src={screenWidth > 1200 ? logo_icon : logo_icon2}
                 alt="logo"
                 loading="lazy"
               />
