@@ -595,9 +595,14 @@
   /* SETTINGS NAV */
   &_nav {
     background: $white;
-    width: 20rem;
+    width: 17.5rem;
     height: 75dvh;
     border-right: 1px solid $btn_light_text;
+
+    @media screen and (min-width: 1400px) {
+      width: 20rem;
+    }
+
     &_inner {
       @include flex_center();
       ul {
@@ -632,6 +637,7 @@
     &_inner {
       @include flex_center();
       justify-content: space-between;
+      gap: 0.5rem;
       width: 100%;
       border-bottom: 1px solid $btn_light_text;
       padding-bottom: 1.5rem;
@@ -640,11 +646,15 @@
     &_left {
       h4 {
         color: $light_dark;
-        font-size: 1.375rem;
+        font-size: 1.1rem;
         font-weight: 700;
         line-height: 1.75rem; /* 127.273% */
         letter-spacing: 0.02188rem;
         text-transform: capitalize;
+
+        @media screen and (min-width: 1400px) {
+          font-size: 1.375rem;
+        }
       }
 
       p {
