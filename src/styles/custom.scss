@@ -297,7 +297,7 @@
       overflow-y: scroll;
 
       &.isCustomerHeight {
-        height: 29.5dvh;
+        max-height: 29.5dvh;
       }
 
       &::-webkit-scrollbar {
