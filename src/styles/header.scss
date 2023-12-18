@@ -15,6 +15,7 @@
     text-transform: capitalize;
     display: grid;
     gap: 0.5rem;
+    min-width: fit-content;
 
     h3 {
       color: $black;
@@ -70,6 +71,7 @@
       gap: 1rem;
 
       .switch {
+        min-width: fit-content;
         p {
           color: $light_dark;
           font-size: 0.75rem;
