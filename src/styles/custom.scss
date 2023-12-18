@@ -512,8 +512,10 @@
   &_left {
     width: 75%;
   }
+
   &_right {
     width: 25%;
+    min-width: fit-content;
     display: grid;
     gap: 0.5rem;
   }
@@ -558,7 +560,7 @@
   &_details {
     display: grid;
     width: 100%;
-    max-width: 19.125rem;
+    max-width: 19rem;
     height: 6.25rem;
     margin: 0 auto;
     padding: 0.875rem 1.25rem;
